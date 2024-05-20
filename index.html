@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TABUADA</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        .container {
+            border: #000000 1px solid; 
+            width: 100%;
+            height: 780px;
+            display: flex;
+            overflow: auto;
+            background-color: #f5f5dc;
+            overflow: hidden;
+            
+
+        }
+
+        .container_resultado {
+            border: 1px solid rgb(0, 0, 0);
+            width: 100%;
+            height: 800px;
+            overflow: auto;
+            background-color:#f5f5dc;
+            
+        }
+
+        .container_choose {
+            width: 800px;
+            height: 800px;
+            overflow: auto;
+            background-color:#f5f5dc;
+
+        }
+
+        .result_box {
+            width: 50%;
+            height: 450px;
+            margin-left: 25%;
+            margin-top: 100px;
+            padding-top: 70px;
+            padding-right: 50px;
+            background-color:#f5f5dc;
+        }
+
+        .widinpt {
+            height: 30px;
+            color: #000000;
+            background-color: rgb(219, 219, 219);
+            box-shadow: #000;
+            display:grid ;
+            margin-left: 213px;
+            text-align: center;
+            margin-left: 25%;
+            
+        }
+
+
+        .btnzero {
+            height: 60px;
+            width: 210px;
+            box-shadow: 1px 1px 1px #ffffff;
+            margin: 5px;
+            margin-left: 80px;
+            background-color: #222121ea;
+            color: white;
+            
+            
+        }
+
+
+        h2 {
+            background-color: #f5f5dc;
+            color: black;
+            text-align: center;
+            border-style: groove;
+            width: 100%;
+            height: 50px;
+            padding-top: 20px;
+        }
+
+
+        .multiplicador {
+            height: 20px;
+            width: 200px;
+            margin-top: 10px;
+        }
+
+
+        .estilo_p {
+           
+            font-size: 50px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-style: oblique;
+            color: rgb(63, 50, 35);
+            text-align: center;
+            background-color: #f5f5dc;
+            
+        }
+
+        .container_numbers {
+            border: 1px solid rgb(255, 255, 255);
+            width: 50;
+            height: 500px;
+            align-items: center;
+            text-align: center;
+            padding-top: 40px;
+            overflow: auto;
+            background-color: #f5f5dc;
+           
+        }
+
+        .btn {
+            height: 60px;
+            width: 60px;
+            box-shadow: 1px 1px 1px #999595;
+            margin: 5px;
+        }
+
+        .input_box {
+
+            text-align: center;
+            font-size: 20px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            box-shadow: 1px 1px 1px #000;
+            background-color: #f5f5dc;
+        }
+
+        .input_user {
+            height: 50px;
+            width: 200px ;
+            text-align: center;
+            align-content: center;
+            font-size: larger;
+        }
+
+        .clear {
+            width: 130px;
+        }
+
+        .enter {
+            height: 110px;
+        }
+
+        .zero {
+            width: 130px;
+            
+        }
+
+        .h2_resultados {
+            margin-top: 40px;
+            text-align: center;
+            align-content: center;
+            padding-bottom: 60px;
+            
+        }
+
+        .enterbutton {
+            height: 60px;
+            width: 60px;
+            box-shadow: 1px 1px 1px #999595;
+            margin: 5px;
+            color: white;
+            background-color: #222121f1;
+            
+
+        }
+    </style>
+
+</head>
+
+
+<body>
+
+    <div style="background-image: url(https://www.colegioweb.com.br/wp-content/uploads/2017/07/Psic%C3%B3loga-ensina-pessoas-a-gostarem-de-matem%C3%A1tica.jpg);">
+
+
+        <h2 style="padding-bottom: 50px; margin-top: 10px;" >TABUADA MALUCA</h2>
+        
+        <div class="container">
+            <!-- <img style=src="imagens_tabuada/img1.webp" alt=""> -->
+            <div class="container_choose">
+                <p class="estilo_p">INSIRA O NUMERO PARA A TABUADA</p>
+
+                <div class="input_box">
+                    <input class= "input_user"  id="outputa" type="text">
+                </div>
+
+
+                <!-- implementa os buttons no html -->
+                <div class="container_numbers">
+
+                    <div>
+                        <button class="btn btn-dark btn-lg font-weight-light" onclick="clickarbutton(1)"
+                            type="button">1</button>
+                        <button class="btn btn-dark btn-lg font-weight-light" onclick="clickarbutton(2)"
+                            type="button">2</button>
+                        <button class="btn btn-dark btn-lg font-weight-light" onclick="clickarbutton(3)"
+                            type="button">3</button>
+                    </div>
+                    <div>
+                        <button class="btn btn-dark btn-lg font-weight-light" onclick="clickarbutton(4)"
+                            type="button">4</button>
+                        <button class="btn btn-dark btn-lg font-weight-light" onclick="clickarbutton(5)"
+                            type="button">5</button>
+                        <button class="btn btn-dark btn-lg font-weight-light" onclick="clickarbutton(6)"
+                            type="button">6</button>
+                    </div>
+                    <div>
+                        <button class="btn btn-dark btn-lg font-weight-light" onclick="clickarbutton(7)"
+                            type="button">7</button>
+                        <button class="btn btn-dark btn-lg font-weight-light" onclick="clickarbutton(8)"
+                            type="button">8</button>
+                        <button class="btn btn-dark btn-lg font-weight-light" onclick="clickarbutton(9)"
+                            type="button">9</button>
+                    </div>
+                    <div>
+                        <button class="btnzero" onclick="clickarbutton(0)" type="button">0</button>
+                        <button class="btn btn-dark btn-lg  font-weight-light" onclick="clickarbutton('c')"
+                            type="button">C</button><br>
+                        <button class="enterbutton" onclick="clickarbutton('=')"
+                            type="button">ENTER</button>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="container_resultado">
+                <div>
+                    <h2 class="h2_resultados">RESULTADOS</h2>
+                    <div class="result_box">
+                        <div>
+                            <input id="resposta1" class="widinpt" type="text">
+                            <input id="resposta2" class="widinpt" type="text">
+                            <input id="resposta3" class="widinpt" type="text">
+                            <input id="resposta4" class="widinpt" type="text">
+                            <input id="resposta5" class="widinpt" type="text">
+                            <input id="resposta6" class="widinpt" type="text">
+                            <input id="resposta7" class="widinpt" type="text">
+                            <input id="resposta8" class="widinpt" type="text">
+                            <input id="resposta9" class="widinpt" type="text">
+                            <input id="resposta10" class="widinpt" type="text">
+                         </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    </div>
+
+
+
+
+    <script>
+
+        // função que dita o que cada botão ira fazer
+        function clickarbutton(valor) {
+
+            document.getElementById("outputa").value += valor
+            // limpa o input dos numeros
+            if (valor === 'c') {
+                document.getElementById("outputa").value = ""
+
+            }
+            // enquanto o valor for diferente de "C" que limpa o visor, ele ira fazer a tabuada até 10. criando uma variavel x identificar um contador.
+            if (valor === '=') {
+                x = 1
+                // enquanto a variavel x não igual a 10 ele continua fazer a multiplicacao do numero que você digitou
+                while (x <= 10) {
+                    var input = document.getElementById('outputa').value
+                    var valor = parseInt(input)
+                    var multiplicacao = valor * x
+                    var inputResultado = document.getElementById('resposta' + x);
+                    (inputResultado.value = multiplicacao);
+                    x++;
+                    
+                    
+                    if (x > 10) {
+                        var input = document.getElementById('outputa').value = ""
+                    }
+
+                 
+                  
+                    
+                }
+            }
+            
+        }
+
+    </script>
+</body>
+
+</html>
