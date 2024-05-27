@@ -5,17 +5,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TABUADA</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <style>
         .container {
-            border: #000000 1px solid; 
+            border: #000000 1px solid;
             width: 100%;
             height: 780px;
             display: flex;
             overflow: auto;
             background-color: #f5f5dc;
             overflow: hidden;
-            
+
 
         }
 
@@ -24,15 +25,28 @@
             width: 100%;
             height: 800px;
             overflow: auto;
-            background-color:#f5f5dc;
-            
+            background-color: #f5f5dc;
+
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                flex-direction: row;
+                height: 780px;
+            }
+
+            .container_choose,
+            .container_resultado {
+                width: 70%;
+                height: auto;
+            }
         }
 
         .container_choose {
             width: 800px;
             height: 800px;
             overflow: auto;
-            background-color:#f5f5dc;
+            background-color: #f5f5dc;
 
         }
 
@@ -43,7 +57,7 @@
             margin-top: 100px;
             padding-top: 70px;
             padding-right: 50px;
-            background-color:#f5f5dc;
+            background-color: #f5f5dc;
         }
 
         .widinpt {
@@ -51,11 +65,11 @@
             color: #000000;
             background-color: rgb(219, 219, 219);
             box-shadow: #000;
-            display:grid ;
+            display: grid;
             margin-left: 213px;
             text-align: center;
             margin-left: 25%;
-            
+
         }
 
 
@@ -67,8 +81,8 @@
             margin-left: 80px;
             background-color: #222121ea;
             color: white;
-            
-            
+
+
         }
 
 
@@ -91,14 +105,14 @@
 
 
         .estilo_p {
-           
+
             font-size: 50px;
             font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
             font-style: oblique;
             color: rgb(63, 50, 35);
             text-align: center;
             background-color: #f5f5dc;
-            
+
         }
 
         .container_numbers {
@@ -110,7 +124,7 @@
             padding-top: 40px;
             overflow: auto;
             background-color: #f5f5dc;
-           
+
         }
 
         .btn {
@@ -132,7 +146,7 @@
 
         .input_user {
             height: 50px;
-            width: 200px ;
+            width: 200px;
             text-align: center;
             align-content: center;
             font-size: larger;
@@ -148,7 +162,7 @@
 
         .zero {
             width: 130px;
-            
+
         }
 
         .h2_resultados {
@@ -156,7 +170,7 @@
             text-align: center;
             align-content: center;
             padding-bottom: 60px;
-            
+
         }
 
         .enterbutton {
@@ -166,7 +180,7 @@
             margin: 5px;
             color: white;
             background-color: #222121f1;
-            
+
 
         }
     </style>
@@ -176,18 +190,19 @@
 
 <body>
 
-    <div style="background-image: url(https://www.colegioweb.com.br/wp-content/uploads/2017/07/Psic%C3%B3loga-ensina-pessoas-a-gostarem-de-matem%C3%A1tica.jpg);">
+    <div
+        style="background-image: url(https://www.colegioweb.com.br/wp-content/uploads/2017/07/Psic%C3%B3loga-ensina-pessoas-a-gostarem-de-matem%C3%A1tica.jpg);">
 
 
-        <h2 style="padding-bottom: 50px; margin-top: 10px;" >TABUADA MALUCA</h2>
-        
+        <h2 style="padding-bottom: 50px; margin-top: 10px;">TABUADA MALUCA</h2>
+
         <div class="container">
             <!-- <img style=src="imagens_tabuada/img1.webp" alt=""> -->
             <div class="container_choose">
                 <p class="estilo_p">INSIRA O NUMERO PARA A TABUADA</p>
 
                 <div class="input_box">
-                    <input class= "input_user"  id="outputa" type="text">
+                    <input class="input_user" id="output" type="text">
                 </div>
 
 
@@ -222,8 +237,7 @@
                         <button class="btnzero" onclick="clickarbutton(0)" type="button">0</button>
                         <button class="btn btn-dark btn-lg  font-weight-light" onclick="clickarbutton('c')"
                             type="button">C</button><br>
-                        <button class="enterbutton" onclick="clickarbutton('=')"
-                            type="button">ENTER</button>
+                        <button class="enterbutton" onclick="clickarbutton('=')" type="button">ENTER</button>
                     </div>
                 </div>
 
@@ -245,7 +259,7 @@
                             <input id="resposta8" class="widinpt" type="text">
                             <input id="resposta9" class="widinpt" type="text">
                             <input id="resposta10" class="widinpt" type="text">
-                         </div>
+                        </div>
 
                     </div>
                 </div>
@@ -266,35 +280,35 @@
         // função que dita o que cada botão ira fazer
         function clickarbutton(valor) {
 
-            document.getElementById("outputa").value += valor
+            document.getElementById("output").value += valor
             // limpa o input dos numeros
             if (valor === 'c') {
-                document.getElementById("outputa").value = ""
+                document.getElementById("output").value = ""
 
             }
             // enquanto o valor for diferente de "C" que limpa o visor, ele ira fazer a tabuada até 10. criando uma variavel x identificar um contador.
             if (valor === '=') {
                 x = 1
-                // enquanto a variavel x não igual a 10 ele continua fazer a multiplicacao do numero que você digitou
+                // enquanto a variavel x não for igual a 10 ele continua fazer a multiplicação do numero que você digitou
                 while (x <= 10) {
-                    var input = document.getElementById('outputa').value
+                    var input = document.getElementById('output').value
                     var valor = parseInt(input)
                     var multiplicacao = valor * x
                     var inputResultado = document.getElementById('resposta' + x);
                     (inputResultado.value = multiplicacao);
                     x++;
-                    
-                    
+
+
                     if (x > 10) {
-                        var input = document.getElementById('outputa').value = ""
+                        var input = document.getElementById('output').value = ""
                     }
 
-                 
-                  
-                    
+
+
+
                 }
             }
-            
+
         }
 
     </script>
